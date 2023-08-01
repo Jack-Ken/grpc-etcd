@@ -1,0 +1,18 @@
+syntax = "proto3";
+package idl;
+option go_package = "../idl";
+
+
+service DemoService {
+  rpc SayHi(HiRequest) returns (HiResponse);
+}
+
+
+message HiRequest {
+  string name = 1;
+}
+
+
+message HiResponse {
+  string message = 1;
+}
